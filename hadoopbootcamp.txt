@@ -1,0 +1,64 @@
+    1  editor ~/.bashrc
+    2  source ~/.bashrc
+    3  editor /usr/local/hadoop/etc/hadoop/hadoop-env.sh
+    4  cd /usr/local/hadoop/etc/hadoop
+    5  nano core-site.xml
+    6  gedit hdfs-site.xml
+    7  nano hdfs-site.xml
+    8  nano mapred-site.xml
+    9  nano mapred-site.xml.template
+   10  nano mapred-site.xml
+   11  nano yarn-site.xml
+   12  hdf namenode -format
+   13  hadoop fs namenode -format
+   14  hadoop -fs namenode -format
+   15  hadoop fs namenode -format
+   16  hdfs namenode -format
+   17  start-dfs.sh
+   18  start-yarn.sh
+   19  jps
+   20  hadoop dfs namenode -format
+   21  hadoop fs namenode -format
+   22  hadoop -fs namenode -format
+   23  hadoop -hffs namenode -format
+   24  hadoop -hdfs namenode -format
+   25  start-dfs.sh
+   26  jps
+   27  cd
+   28  ls
+   29  nano my_file.java
+   30  javac my_file.java
+   31  ls
+   32  java MyClass
+   33  hadoop fs -mkdir /user
+   34  hadoop fs -ls
+   35  hadoop fs -ls /
+   36  editor ~/.bashrc
+   37  source ~/.bashrc
+   38  export PATH=${JAVA_HOME}/bin:${PATH}
+   39  nano WordCount.java
+   40  javac WordCount.java
+   41  nano WordCount2.java
+   42  javac WordCount2.java
+   43  javac -classpath /usr/local/hadoop-2.9.1/share/hadoop/common/hadoop-common-2.9.1.jar -d wordcount_classes WordCount.java 
+   44  javac -classpath /usr/local/hadoop/share/hadoop/common/hadoop-common-2.9.1.jar -d wordcount_classes WordCount.java 
+   45  javac -classpath /usr/local/hadoop/share/hadoop/common/hadoop-common-2.9.1.jar -d wordcount_classes WordCount2.java 
+   46  export JAVA_HOME="/usr/lib/jvm/java-8-oracle/"
+   47  javac WordCount2.java
+   48  javac WordCount.java -cp $(hadoop classpath)
+   49  ls
+   50  jar cf wc.jar WordCount*.class
+   51  ls
+   52  hadoop fs -mkdir /user/joe
+   53  hadoop fs -mkdir /user/joe/wordcount
+   54  hadoop fs -mkdir /user/joe/wordcount/input
+   55  nano file01
+   56  nano file02
+   57  hadoop fs -put  /home/hadoopuser/input_data/file01  /user/joe/wordcount/input/
+   58  hadoop fs -put  file01  /user/joe/wordcount/input/
+   59  hadoop fs -put  file02  /user/joe/wordcount/input/
+   60  hadoop jar wc.jar WordCount /user/joe/wordcount/input /user/joe/wordcount/output
+   61  hadoop fs -cat /user/joe/wordcount/output2/part-00000
+   62  hadoop fs -cat /user/joe/wordcount/output/part-00000
+   63  hadoop fs -cat /user/joe/wordcount/output/part-r-00000
+   64  history > hadoopbootcamp.txt

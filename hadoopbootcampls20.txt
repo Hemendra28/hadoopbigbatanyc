@@ -1,0 +1,20 @@
+   56  nano file02
+   57  hadoop fs -put  /home/hadoopuser/input_data/file01  /user/joe/wordcount/input/
+   58  hadoop fs -put  file01  /user/joe/wordcount/input/
+   59  hadoop fs -put  file02  /user/joe/wordcount/input/
+   60  hadoop jar wc.jar WordCount /user/joe/wordcount/input /user/joe/wordcount/output
+   61  hadoop fs -cat /user/joe/wordcount/output2/part-00000
+   62  hadoop fs -cat /user/joe/wordcount/output/part-00000
+   63  hadoop fs -cat /user/joe/wordcount/output/part-r-00000
+   64  history > hadoopbootcamp.txt
+   65  cat hadoopbootcamp.txt 
+   66  nano file01
+   67  nano file02
+   68  hadoop fs -put  file01  /user/joe/wordcount/input/
+   69  hadoop fs -put -f  file01  /user/joe/wordcount/input/
+   70  hadoop fs -put -f  file02  /user/joe/wordcount/input/
+   71  hadoop fs -cat /user/joe/wordcount/input/file01
+   72  hadoop fs -cat /user/joe/wordcount/input/file02
+   73  hadoop jar wc.jar WordCount /user/joe/wordcount/input /user/joe/wordcount/output2
+   74  hadoop fs -cat /user/joe/wordcount/output2/part-r-00000
+   75  history 20 > hadoopbootcampls20.txt
